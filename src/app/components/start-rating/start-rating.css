@@ -1,0 +1,17 @@
+.etoile{
+    font-size: 24px;
+    color: black;
+}
+
+.etoiles:hover{
+    transform: scale();
+    color: yellow;
+    font-size: 24px;
+    
+}
+.etoile:hover{
+    transform: scale();
+    color: yellow;
+    font-size: 32px;
+
+}

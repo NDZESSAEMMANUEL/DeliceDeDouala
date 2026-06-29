@@ -1,0 +1,10 @@
+<div class="card">
+    <span> {{resto().name }}</span>
+    <span> {{ resto().district }}</span>
+    <span> {{ resto().specialty }}</span>
+    
+</div>
+
+<app-start-rating [star]="resto().currentRating" (starClick)="onStarClick($event)">
+
+</app-start-rating>

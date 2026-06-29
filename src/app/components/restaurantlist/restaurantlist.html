@@ -1,0 +1,5 @@
+
+@for (resto of restaurant() ; track resto.id){
+    <app-restaurant-card [resto]="resto" (starUpdate)="updateCard($event,resto.id,  clickNumber)" ></app-restaurant-card>
+}
+

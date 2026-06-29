@@ -1,0 +1,24 @@
+@if(firstClick===0){
+      <span>Clique pour noter</span>
+      @for (item of total() ; track $index) {
+      @if($index < star()){
+        <span class="etoiles"(click)="onStarClick($index+1)">⭐</span>
+      }@else{
+        <span class="etoile"(click)="onStarClick($index+1)">☆</span> 
+      } 
+    }
+}@else {
+  <span>{{ star() }}/5</span>
+  @for (item of total() ; track $index) {
+      @if($index < star()){
+        <span class="etoiles"(click)="onStarClick($index+1)">⭐</span>
+      }@else{
+        <span class="etoile"(click)="onStarClick($index+1)">☆</span> 
+      } 
+    }
+}
+
+
+
+ 
+
