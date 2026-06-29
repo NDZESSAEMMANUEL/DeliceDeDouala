@@ -1,5 +1,7 @@
+<div class="restaurant-grid"> 
+    @for (resto of restaurant() ; track resto.id){
+        <app-restaurant-card [resto]="resto" (starUpdate)="updateCard($event,resto.id)" ></app-restaurant-card>
+    }
+</div>
 
-@for (resto of restaurant() ; track resto.id){
-    <app-restaurant-card [resto]="resto" (starUpdate)="updateCard($event,resto.id)" ></app-restaurant-card>
-}
-
+ 

@@ -1,10 +1,9 @@
 <div class="card">
-    <span> {{resto().name }}</span>
-    <span> {{ resto().district }}</span>
-    <span> {{ resto().specialty }}</span>
-    
+    <span class="restaurant-name ">  {{resto().name }}</span>
+    <span class="district"> {{ resto().district }}</span>
+    <span class="specialty"> {{ resto().specialty }}</span>
+    <app-start-rating [star]="resto().currentRating" (starClick)="onStarClick($event)" class="rating-section"></app-start-rating>  
 </div>
 
-<app-start-rating [star]="resto().currentRating" (starClick)="onStarClick($event)">
 
-</app-start-rating>
+
