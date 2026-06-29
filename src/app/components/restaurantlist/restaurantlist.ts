@@ -10,10 +10,9 @@ import { Restaurant } from '../../models/restaurant';
 })
 export class Restaurantlist {
   restaurant = input.required<Restaurant[]>()
-  cardUpdate = output<{idUpdate:number,starUpdate:number,clickNumber:number}>()
+  cardUpdate = output<{idUpdate:number,starUpdate:number}>()
   clickNumber = 0
-  updateCard(star:number,id:number,clickNumber:number){
-    this.cardUpdate.emit({idUpdate:id,starUpdate:star,clickNumber:this.clickNumber})
-    this.clickNumber+=1
+  updateCard(star:number,id:number){
+    this.cardUpdate.emit({idUpdate:id,starUpdate:star})
   }
 }

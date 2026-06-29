@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { Header } from './components/header/header';
 import { Restaurantlist } from './components/restaurantlist/restaurantlist';
 import { Restaurant } from './models/restaurant';
@@ -21,24 +21,21 @@ export class App {
     { id: 6, name: 'Le Royal de Bali', district: 'Bali', specialty: 'Koki et plantain', currentRating: 0 }
   ]);
 
+  private ratedRestaurantIds = new Set<number>();
+
   sendInfo = signal<{ name: string; cardNote: number }>({
     name: this.title(), 
-    cardNote: 0
+    cardNote: 0 
   });
 
-  restoUpdate(updateResto: { idUpdate: number; starUpdate: number; clickNumber: number }) {
+  restoUpdate(updateResto: { idUpdate: number; starUpdate: number}) {
     this.restaurants.update(currentList =>
       currentList.map(r => r.id === updateResto.idUpdate ? { ...r, currentRating: updateResto.starUpdate } : r)
     );
-    if (updateResto.clickNumber === 0) {
-      const targetResto = this.restaurants().find(r => r.id === updateResto.idUpdate);
-      
-      if (targetResto) {
-        this.sendInfo.set({
-          name: targetResto.name, 
-          cardNote: updateResto.starUpdate
-        });
-      }
-    }
+    this.ratedRestaurantIds.add(updateResto.idUpdate);
+    this.sendInfo.set({
+      name: this.title(),
+      cardNote: this.ratedRestaurantIds.size
+    });
   }
 }
