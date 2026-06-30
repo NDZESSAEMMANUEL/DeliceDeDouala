@@ -1,6 +1,41 @@
-# DeliceDeDouala
+#  Délices de Douala
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.1.
+Bienvenue sur le projet **Délices de Douala** ! Une application web moderne (Single Page Application) conçue pour célébrer la gastronomie et offrir une expérience utilisateur fluide et gourmande.
+
+**Démo en ligne :** [https://delice-de-douala.vercel.app/](https://delice-de-douala.vercel.app/)
+
+---
+
+## Développeur
+
+Ce projet a été réalisé avec  par :
+* **[NDZESSA EMMANUEL FREDY]** - *Développeur Principal*
+
+---
+Dans le cadre de  :
+* **[Orange Digital Center ]** - *Angular Talent Lab*
+
+---
+
+##  Technologies Utilisées
+
+* **Framework :** Angular (v17+)
+* **Hébergement & Déploiement :** Vercel
+* **Gestion des paquets :** npm
+
+---
+
+## Installation et Lancement en Local
+
+Suivez ces étapes pour faire tourner le projet sur votre machine :
+
+### 1. Prérequis
+Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé sur votre système.
+
+### 2. Cloner le projet
+```bash
+git clone <URL_DE_VOTRE_DEPOT_GITHUB>
+cd delice-de-douala
 
 ## Development server
 
