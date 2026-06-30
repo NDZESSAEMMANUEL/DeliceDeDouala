@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/delice-de-douala/browser",
+  "outputDirectory": "dist/DeliceDeDouala/browser",
   "rewrites": [
     {
       "source": "/(.*)",
