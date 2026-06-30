@@ -34,7 +34,7 @@ Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé sur votre système
 
 ### 2. Cloner le projet
 ```bash
-git clone <URL_DE_VOTRE_DEPOT_GITHUB>
+git clone git@github.com:NDZESSAEMMANUEL/DeliceDeDouala.git
 cd delice-de-douala
 
 ## Development server
